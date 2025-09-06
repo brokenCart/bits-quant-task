@@ -7,7 +7,7 @@ import os
 os.makedirs("images", exist_ok=True)
 
 TICKER = "AAPL"
-DATA = yf.download(TICKER, period="1y")
+DATA = yf.download(TICKER, period="max")
 CLOSE_PRICES = DATA["Close"][TICKER].tolist()
 N = 10
 
